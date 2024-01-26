@@ -4,7 +4,7 @@
   /* border: solid #4b4e6d 2px; */
 }
 body {
-  background-color: #e8eddf;
+  background-color: #e7ecef;
   margin: 0em 10em 2em 10em;
   display: flex;
   flex-direction: column;
@@ -13,19 +13,30 @@ body {
 
 .calculatorBody {
   display: flex;
-  flex-wrap: nowrap;
-  min-width: max-content;
-  /* border: #4b4e6d solid; */
+  width: 300px;
   flex-direction: column;
   border-radius: 12px;
   justify-content: space-around;
   align-items: stretch;
+  padding: 12px;
+  background-color: #272932;
 }
 .row1 {
-  background-color: #e8eddf;
-  text-align: end;
-  padding: 12px 12px 12px 12px;
-  height: 100px;
+  background-color: #e7ecef;
+  border-radius: 8px;
+  padding: 8px;
+  margin: 4px;
+  margin-bottom: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+}
+.output {
+  font-size: 24px;
+}
+
+.input {
+  font-size: 36px;
 }
 
 h1 {
@@ -34,6 +45,36 @@ h1 {
 
 button {
   font-size: 48px;
-  border: #4b4e6d solid;
+  flex: 1;
   margin: 2px;
+  border-radius: 8px;
+}
+
+.row2 {
+  display: flex;
+}
+.row3 {
+  display: flex;
+}
+.row4 {
+  display: flex;
+}
+.row5 {
+  display: flex;
+}
+.row6 {
+  display: flex;
+}
+.clear {
+  flex: 4;
+}
+.delete {
+  flex: 1;
+}
+.equal {
+  background-color: #f4d35e;
+}
+
+button:active {
+  background-color: #c8d3d5;
 }
