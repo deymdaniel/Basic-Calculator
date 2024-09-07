@@ -48,23 +48,14 @@ function equals() {
   const equalsBtn = document.querySelector(".equal");
   equalsBtn.onclick = function () {
     if (input.innerHTML.includes("+")) {
-      output.innerHTML +=
+      if (!(output.innerHTML = 0)) {
+        output.innerHTML =
+          +output.innerHTML +
+          +input.innerHTML.split("+")[0] +
+          +input.innerHTML.split("+")[1];
+      }
+      output.innerHTML =
         +input.innerHTML.split("+")[0] + +input.innerHTML.split("+")[1];
-    }
-
-    if (input.innerHTML.includes("-")) {
-      output.innerHTML +=
-        +input.innerHTML.split("-")[0] - +input.innerHTML.split("-")[1];
-    }
-
-    if (input.innerHTML.includes("/")) {
-      output.innerHTML +=
-        +input.innerHTML.split("/")[0] / +input.innerHTML.split("/")[1];
-    }
-
-    if (input.innerHTML.includes("*")) {
-      output.innerHTML +=
-        +input.innerHTML.split("*")[0] * +input.innerHTML.split("*")[1];
     }
 
     input.innerHTML = "";
