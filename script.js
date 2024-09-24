@@ -44,6 +44,18 @@ function operationClick() {
   }
 }
 
+//Delete button
+const delBtn = document.querySelector(".delete");
+delBtn.onclick = function () {
+  input.innerHTML = input.innerHTML.slice(0, -1);
+};
+
+//point button
+const pointBtn = document.querySelector(".point");
+pointBtn.onclick = function () {
+  input.innerHTML = input.innerHTML + ".";
+};
+
 function equals() {
   const equalsBtn = document.querySelector(".equal");
   equalsBtn.onclick = function () {
@@ -71,11 +83,23 @@ function equals() {
       if (output.innerHTML != 0) {
         output.innerHTML =
           +output.innerHTML *
-          +input.innerHTML.split("*")[0] *
+          // +input.innerHTML.split("*")[0] *
           +input.innerHTML.split("*")[1];
       } else {
         output.innerHTML =
           +input.innerHTML.split("*")[0] * +input.innerHTML.split("*")[1];
+      }
+    }
+    //Division
+    if (input.innerHTML.includes("/")) {
+      if (output.innerHTML != 0) {
+        output.innerHTML =
+          +output.innerHTML /
+          // +input.innerHTML.split("*")[0] *
+          +input.innerHTML.split("/")[1];
+      } else {
+        output.innerHTML =
+          +input.innerHTML.split("/")[0] / +input.innerHTML.split("/")[1];
       }
     }
 
