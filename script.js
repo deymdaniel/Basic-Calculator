@@ -47,15 +47,36 @@ function operationClick() {
 function equals() {
   const equalsBtn = document.querySelector(".equal");
   equalsBtn.onclick = function () {
+    //Addition
     if (input.innerHTML.includes("+")) {
-      if (!(output.innerHTML = 0)) {
-        output.innerHTML =
-          +output.innerHTML +
-          +input.innerHTML.split("+")[0] +
-          +input.innerHTML.split("+")[1];
-      }
       output.innerHTML =
-        +input.innerHTML.split("+")[0] + +input.innerHTML.split("+")[1];
+        +output.innerHTML +
+        +input.innerHTML.split("+")[0] +
+        +input.innerHTML.split("+")[1];
+    }
+    //Subtraction
+    if (input.innerHTML.includes("-")) {
+      if (output.innerHTML != 0) {
+        output.innerHTML =
+          +output.innerHTML -
+          +input.innerHTML.split("-")[0] -
+          +input.innerHTML.split("-")[1];
+      } else {
+        output.innerHTML =
+          +input.innerHTML.split("-")[0] - +input.innerHTML.split("-")[1];
+      }
+    }
+    //Multiplication
+    if (input.innerHTML.includes("*")) {
+      if (output.innerHTML != 0) {
+        output.innerHTML =
+          +output.innerHTML *
+          +input.innerHTML.split("*")[0] *
+          +input.innerHTML.split("*")[1];
+      } else {
+        output.innerHTML =
+          +input.innerHTML.split("*")[0] * +input.innerHTML.split("*")[1];
+      }
     }
 
     input.innerHTML = "";
